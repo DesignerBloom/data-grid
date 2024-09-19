@@ -10,16 +10,11 @@ import {
   GridRowModes,
   DataGridPremium,
   GridToolbarContainer,
-  GridToolbarColumnsButton,
-  GridToolbarFilterButton,
   GridToolbarExport,
+  GridToolbarColumnsButton,
   GridToolbarDensitySelector,
   GridActionsCellItem,
   GridRowEditStopReasons,
-  gridPageCountSelector,
-  GridPagination,
-  useGridApiContext,
-  useGridSelector,
 } from '@mui/x-data-grid-premium';
 import {
   randomCreatedDate,
@@ -69,62 +64,6 @@ const initialRows = [
     joinDate: randomCreatedDate(),
     role: randomRole(),
   },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 43,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 50,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 60,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 30,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 20,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 37,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 29,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
-  {
-    id: randomId(),
-    name: randomTraderName(),
-    age: 38,
-    joinDate: randomCreatedDate(),
-    role: randomRole(),
-  },
 ];
 
 function EditToolbar(props) {
@@ -149,14 +88,10 @@ function EditToolbar(props) {
       </Button>
       <GridToolbarColumnsButton />
       <GridToolbarDensitySelector />
-      <GridToolbarFilterButton />
-      {/* <Box sx={{ flexGrow: 1 }} /> */}
       <GridToolbarExport />
     </GridToolbarContainer>
   );
 }
-
-
 
 export default function FullFeaturedCrudGrid() {
   const [rows, setRows] = React.useState(initialRows);
